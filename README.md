@@ -31,8 +31,7 @@ It provides:
 
 ### Extension Popup
 
-(Add screenshot here later)
-
+![TEAM HORCRUX Compressor](screenshot.png)
 ---
 
 ## 🎯 Features
