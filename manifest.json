@@ -1,9 +1,11 @@
 {
   "manifest_version": 3,
   "name": "TEAM HORCRUX Compressor",
-  "version": "1.0",
-  "description": "MACS File Compression Chrome Extension",
+  "short_name": "HORCRUX",
+  "version": "1.0.0",
+  "description": "Smart file compression extension with lossy and lossless modes.",
   "action": {
+    "default_title": "TEAM HORCRUX Compressor",
     "default_popup": "popup.html"
   }
 }

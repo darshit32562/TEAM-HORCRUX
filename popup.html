@@ -1,33 +1,37 @@
-<!doctype html>
-<html>
-  <head>
-    <title>TEAM HORCRUX Compressor</title>
-    <link rel="stylesheet" href="popup.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>TEAM HORCRUX</h1>
-      <h2>Professional File Compressor</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEAM HORCRUX Compressor</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
 
-      <input type="file" id="fileInput" />
+<body>
+  <div class="container">
 
-      <select id="compressionType">
-        <option value="lossy">Lossy Compression</option>
-        <option value="lossless">Lossless Compression</option>
-      </select>
+    <h1>TEAM HORCRUX</h1>
+    <h2>Smart File Compressor</h2>
 
-      <button id="compressBtn">Compress File</button>
-      <div class="progress-box">
-        <div id="progressBar"></div>
-      </div>
+    <input type="file" id="fileInput">
 
-      <div id="result"></div>
+    <select id="compressionType">
+      <option value="lossy">Lossy Compression</option>
+      <option value="lossless">Lossless Compression</option>
+    </select>
 
-      <button id="downloadBtn" style="display: none">
-        Download Compressed File
-      </button>
+    <button id="compressBtn">Compress File</button>
+
+    <div class="progress-box">
+      <div id="progressBar"></div>
     </div>
 
-    <script src="popup.js"></script>
-  </body>
+    <div id="result"></div>
+
+    <button id="downloadBtn">Download Compressed File</button>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
 </html>

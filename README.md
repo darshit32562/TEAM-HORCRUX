@@ -1,62 +1,58 @@
-<h1 align="center">⚡ TEAM HORCRUX Compressor ⚡</h1>
+# TEAM HORCRUX Compressor
 
-<p align="center">
-Professional Chrome Extension for File Compression
-</p>
+A Chrome Extension developed for quick and simple file compression directly inside the browser.
 
-<p align="center">
-<img src="https://img.shields.io/badge/Version-1.0-blue">
-<img src="https://img.shields.io/badge/Platform-Chrome-green">
-<img src="https://img.shields.io/badge/Status-Active-success">
-<img src="https://img.shields.io/badge/Team-HORCRUX-purple">
-</p>
+## Overview
 
----
+TEAM HORCRUX Compressor allows users to upload files, choose a compression mode, and view compression statistics instantly through a clean popup interface.
 
-## 🚀 About Project
+Supported modes:
 
-TEAM HORCRUX Compressor is a modern Chrome Extension developed for quick and easy file compression directly inside the browser.
+- Lossy Compression
+- Lossless Compression
 
-It provides:
+## Features
 
-✅ Lossy Compression  
-✅ Lossless Compression  
-✅ Download Compressed File  
-✅ Progress Bar  
-✅ Professional UI
+- File Upload Support
+- Compression Mode Selection
+- Original File Size Display
+- Compressed File Size Display
+- Compression Ratio
+- Space Saving Percentage
+- Download Compressed File
+- Progress Indicator
+- Clean User Interface
 
----
+## Technologies Used
 
-## 🖼️ Preview
-
-### Extension Popup
-
-![TEAM HORCRUX Compressor](Screenshot.png)
----
-
-## 🎯 Features
-
-| Feature | Available |
-|--------|----------|
-| File Upload | ✅ |
-| Lossy Compression | ✅ |
-| Lossless Compression | ✅ |
-| Download File | ✅ |
-| Progress Bar | ✅ |
-| Clean UI | ✅ |
-
----
-
-## 🛠 Built With
-
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript
-- Chrome Extension API
+- Chrome Extension Manifest V3
 
----
+## Installation
 
-## 📂 Installation
+1. Open Google Chrome  
+2. Visit `chrome://extensions/`  
+3. Enable Developer Mode  
+4. Click **Load unpacked**  
+5. Select the project folder
 
-```bash
-git clone https://github.com/darshit32562/TEAM-HORCRUX.git
+## How to Use
+
+1. Open the extension from toolbar  
+2. Select any file  
+3. Choose compression type  
+4. Click **Compress File**  
+5. Review results  
+6. Download processed file
+
+## Project Structure
+
+```text id="j8v95m"
+TEAM-HORCRUX/
+├── manifest.json
+├── popup.html
+├── popup.css
+├── popup.js
+└── README.md
