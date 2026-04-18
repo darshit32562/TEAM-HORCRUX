@@ -57,11 +57,7 @@ function processFile(file) {
     <b>Compressed Size:</b> ${formatBytes(compressedSize)}<br>
     <b>Space Saved:</b> ${formatBytes(savedBytes)}<br>
     <b>Compression Ratio:</b> ${ratio}:1<br>
-    <b>Space Saving:</b> ${savingPercent}%<br><br>
-
-    <b>Formula Used:</b><br>
-    Space Saving (%) = <br>
-    [(Original Size - Compressed Size) / Original Size] × 100
+    <b>Space Saving:</b> ${savingPercent}%<br>
   `;
 
   downloadBtn.style.display = "block";
@@ -92,7 +88,13 @@ function capitalize(text) {
 }
 
 function formatBytes(bytes) {
-  if (bytes < 1024) return bytes + " B";
-  if (bytes < 1048576) return (bytes / 1024).toFixed(2) + " KB";
-  return (bytes / 1048576).toFixed(2) + " MB";
+  if (bytes < 1024) {
+    return bytes + " B";
+  } else if (bytes < 1024 * 1024) {
+    return (bytes / 1024).toFixed(2) + " KB";
+  } else if (bytes < 1024 * 1024 * 1024) {
+    return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+  } else {
+    return (bytes / (1024 * 1024 * 1024)).toFixed(2) + " GB";
+  }
 }
