@@ -1,38 +1,54 @@
-# TEAM HORCRUX Compressor 🚀
+<h1 align="center">⚡ TEAM HORCRUX Compressor ⚡</h1>
 
-A professional Chrome Extension for file compression built using HTML, CSS, and JavaScript.
+<p align="center">
+Professional Chrome Extension for File Compression
+</p>
 
-## 📌 Project Description
+<p align="center">
+<img src="https://img.shields.io/badge/Version-1.0-blue">
+<img src="https://img.shields.io/badge/Platform-Chrome-green">
+<img src="https://img.shields.io/badge/Status-Active-success">
+<img src="https://img.shields.io/badge/Team-HORCRUX-purple">
+</p>
 
-TEAM HORCRUX Compressor is a browser extension that allows users to compress files quickly with an easy-to-use interface.
+---
 
-Users can choose:
+## 🚀 About Project
 
-- Lossy Compression
-- Lossless Compression
+TEAM HORCRUX Compressor is a modern Chrome Extension developed for quick and easy file compression directly inside the browser.
 
-The extension displays:
+It provides:
 
-- Original file size
-- Compressed file size
-- Space saved
-- Download compressed file option
+✅ Lossy Compression  
+✅ Lossless Compression  
+✅ Download Compressed File  
+✅ Progress Bar  
+✅ Professional UI
+
+---
+
+## 🖼️ Preview
+
+### Extension Popup
+
+(Add screenshot here later)
 
 ---
 
 ## 🎯 Features
 
-✅ Professional UI  
-✅ Fast Compression  
-✅ Lossy Mode  
-✅ Lossless Mode  
-✅ Progress Bar  
-✅ Download Option  
-✅ Chrome Extension Support
+| Feature | Available |
+|--------|----------|
+| File Upload | ✅ |
+| Lossy Compression | ✅ |
+| Lossless Compression | ✅ |
+| Download File | ✅ |
+| Progress Bar | ✅ |
+| Clean UI | ✅ |
 
 ---
 
-## 🛠 Technologies Used
+## 🛠 Built With
 
 - HTML5
 - CSS3
@@ -41,48 +57,7 @@ The extension displays:
 
 ---
 
-## 📂 Project Files
+## 📂 Installation
 
-- manifest.json
-- popup.html
-- popup.css
-- popup.js
-
----
-
-## 🚀 How to Run
-
-1. Open Chrome Browser  
-2. Go to chrome://extensions  
-3. Enable Developer Mode  
-4. Click Load Unpacked  
-5. Select Project Folder  
-6. Use Extension
-
----
-
-## 👨‍💻 Team Name
-
-TEAM HORCRUX
-
----
-
-## 📚 Academic Purpose
-
-Submitted as MACS Project.
-
----
-
-## 🔮 Future Improvements
-
-- Real PDF Compression
-- Image Compression
-- Drag & Drop Upload
-- Cloud Backup
-- Dark Mode UI
-
----
-
-## ⭐ GitHub Repository
-
-If you like this project, star the repository.
+```bash
+git clone https://github.com/darshit32562/TEAM-HORCRUX.git
