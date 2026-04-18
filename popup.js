@@ -14,7 +14,7 @@ function startCompression() {
   const file = fileInput.files[0];
 
   if (!file) {
-    alert("Please select a file to continue.");
+    alert("Please select a file first.");
     return;
   }
 
@@ -57,7 +57,11 @@ function processFile(file) {
     <b>Compressed Size:</b> ${formatBytes(compressedSize)}<br>
     <b>Space Saved:</b> ${formatBytes(savedBytes)}<br>
     <b>Compression Ratio:</b> ${ratio}:1<br>
-    <b>Space Saving:</b> ${savingPercent}%<br>
+    <b>Space Saving:</b> ${savingPercent}%<br><br>
+
+    <b>Formula Used:</b><br>
+    Space Saving (%) = <br>
+    [(Original Size - Compressed Size) / Original Size] × 100
   `;
 
   downloadBtn.style.display = "block";
