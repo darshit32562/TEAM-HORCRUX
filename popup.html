@@ -1,37 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TEAM HORCRUX Compressor</title>
+  <title>Compression Tool</title>
   <link rel="stylesheet" href="popup.css">
 </head>
-
 <body>
-  <div class="container">
 
-    <h1>TEAM HORCRUX</h1>
-    <h2>Smart File Compressor</h2>
+<div class="container">
 
-    <input type="file" id="fileInput">
+  <h2>📦 File Compression</h2>
 
-    <select id="compressionType">
-      <option value="lossy">Lossy Compression</option>
-      <option value="lossless">Lossless Compression</option>
-    </select>
-
-    <button id="compressBtn">Compress File</button>
-
-    <div class="progress-box">
-      <div id="progressBar"></div>
-    </div>
-
-    <div id="result"></div>
-
-    <button id="downloadBtn">Download Compressed File</button>
-
+  <!-- Upload Box -->
+  <div id="uploadBox">
+    <p>📁 Drag & Drop or Click to Upload</p>
+    <input type="file" id="fileInput" hidden>
   </div>
 
-  <script src="popup.js"></script>
+  <!-- File Info -->
+  <div id="fileInfo" style="display:none;">
+    <p id="fileName"></p>
+    <p><b>Type:</b> <span id="fileType"></span></p> <!-- 🔴 IMPORTANT FIX -->
+    <button id="changeFileBtn">Change File</button>
+  </div>
+
+  <!-- Image Quality -->
+  <div id="qualityContainer" style="display:none;">
+    <label>Quality: <span id="qualityValue">0.7</span></label>
+    <input type="range" min="0.1" max="1" step="0.1" value="0.7" id="qualitySlider">
+  </div>
+
+  <div class="buttons">
+    <button id="compressBtn">Compress</button>
+    <button id="decompressBtn">Decompress</button>
+  </div>
+
+  <div id="results" class="card">
+    <p>Original: <span id="originalSize">-</span></p>
+    <p>Compressed: <span id="compressedSize">-</span></p>
+    <p>Ratio: <span id="ratio">-</span></p>
+    <p>Savings: <span id="savings">-</span></p>
+    <p id="hashStatus"></p>
+
+    <p><b>Space Usage</b></p>
+    <div id="progressBar">
+      <div id="usedBar"></div>
+      <div id="savedBar"></div>
+    </div>
+  </div>
+
+  <div class="buttons">
+    <button id="downloadCompressed">Download Compressed</button>
+    <button id="downloadDecompressed">Download Decompressed</button>
+  </div>
+
+</div>
+
+<script src="lib/fflate.min.js"></script>
+<script src="popup.js"></script>
+
 </body>
 </html>
