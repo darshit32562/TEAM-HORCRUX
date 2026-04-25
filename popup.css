@@ -132,3 +132,15 @@ button:hover {
 button {
   margin-top: 6px;
 }
+
+#compressionTypeContainer {
+  margin-bottom: 12px;
+}
+
+#compressionType {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}

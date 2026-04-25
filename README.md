@@ -1,7 +1,7 @@
 # 📦 File Compression Chrome Extension
 
 **Team Horcrux**
-**Status:** Submitted — MACS Project
+**Status:** Submitted — Academic Project (MACS)
 
 ---
 
@@ -13,12 +13,12 @@ This project is a Chrome extension that allows users to compress and decompress 
 
 # 👥 Team Members
 
-* Member 1 — UI Design & Frontend
-* Member 2 — Compression Logic
-* Member 3 — Decompression & File Handling
-* Member 4 — Metrics & Visualization
-* Member 5 — Testing & Sample Files
-* Member 6 — Documentation & README
+* Shreyas Mathur — UI Design & Frontend
+* Darshit Aggarwal — Compression Logic
+* Parv Singla — Decompression & File Handling
+* Chirag — Metrics & Visualization
+* Mahi Kataria — Testing & Sample Files
+* Shweta — Documentation & README
 
 ---
 
@@ -31,25 +31,30 @@ This project is a Chrome extension that allows users to compress and decompress 
   * Audio (.mp3, .wav)
   * Video (.mp4)
 * Compression methods:
-
-  * Gzip (lossless) for text, audio, video
+  * Gzip (lossless) for text files
   * Canvas-based lossy compression for images
+  * Basic processing for audio/video (limited compression due to pre-encoded formats)
 * Displays:
 
   * Original file size
   * Compressed file size
   * Compression ratio
   * Space savings percentage
+  * Quality Metrics:
+  * PSNR for images
+  * SNR for audio
 * Decompression support:
 
   * Upload `.gz` files and restore original data
 * Verification:
-
-  * SHA-256 hash comparison for lossless files
-  * PSNR metric for lossy image compression
+  * SHA-256 hash comparison for lossless compression
+    (ensures byte-for-byte reconstruction)
+  * PSNR (images) and SNR (audio) for lossy compression quality
 * Drag-and-drop file upload
 * Download compressed and decompressed files
 * Error handling for invalid inputs
+* Compression mode selection is dynamically adjusted based on file type
+  (invalid options are disabled)
 
 ---
 
@@ -87,9 +92,10 @@ Click the puzzle icon → pin the extension for easy access.
 
 1. Open the extension
 2. Upload a file (click or drag & drop)
-3. Click **Compress**
-4. View metrics (ratio, savings, etc.)
-5. Click **Download Compressed**
+3. Choose option (lossless/lossy) from dropdown. Note: Both options are not available for all file types.
+4. Click **Compress**
+5. View metrics (ratio, savings, etc.)
+6. Click **Download Compressed**
 
 ### Decompression
 
@@ -104,9 +110,9 @@ Click the puzzle icon → pin the extension for easy access.
 | File Type    | Original Size | Compressed Size | Ratio  | Savings |
 |-------------|--------------|----------------|--------|--------|
 | Text (.txt) | 4.3 KB       | 0.331 KB       | 13.31:1 | 92.49% |
-| Image (.jpg)| 2.4 MB       | 0.971 MB       | 2.53:1  | 60.5%  |
+| Image (.jpg)| 2.4 MB       | 0.741 MB       | 3.32:1  | 69.84%  |
 | Audio (.mp3)| 50.86 KB     | 48.54 KB       | 1.05:1  | 4.56%  |
-| Video (.mp4)| 2.72 MB      | 2.70 MB        | 1.01:1  | 0.52%  |
+| Video (.mp4)| 2.72 MB      | 1.890 MB        | 1.43:1  | 30.26%  |
 
 ---
 
@@ -117,20 +123,24 @@ Click the puzzle icon → pin the extension for easy access.
 * SHA-256 hash comparison used
 * Matching hashes confirm perfect reconstruction
 
-*(Add screenshot of matching hash output)*
+**Example: Perfect Reconstruction Verified using SHA-256**
+
+![Hash Verification](assets/hash_verification.png)
 
 ### Lossy Files (Images)
 
 * PSNR (Peak Signal-to-Noise Ratio) calculated
 * Higher PSNR → better quality
 
-![alt text](image.png)
+**Example: Image Compression with PSNR**
+
+![PSNR Example](assets/psnr_example.png)
 
 # 🧠 Algorithm Explanation
 
 ### 1. Gzip Compression (via fflate.js)
 
-* Used for: text, audio, video
+* Used for: text files (effective), audio/video (limited impact)
 * Type: Lossless
 * Reason:
 
@@ -186,6 +196,7 @@ Click the puzzle icon → pin the extension for easy access.
 * Image compression converts to JPEG (may lose transparency)
 * Only `.gz` format supported for decompression
 * Works best on Chromium-based browsers
+* Browser-based audio decoding may fail for some formats, fallback methods are used
 
 ---
 
