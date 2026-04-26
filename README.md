@@ -13,12 +13,21 @@ This project is a Chrome extension that allows users to compress and decompress 
 
 # 👥 Team Members
 
-* Shreyas Mathur — UI Design & Frontend
+* Shreyas Mathur — UI Design & Frontend 
 * Darshit Aggarwal — Compression Logic
 * Parv Singla — Decompression & File Handling
 * Chirag — Metrics & Visualization
 * Mahi Kataria — Testing & Sample Files
 * Shweta — Documentation & README
+
+# 👥 Team Members' Contribution
+
+* Shreyas Mathur — UI Design & Frontend (17%)
+* Darshit Aggarwal — Compression Logic (17%)
+* Parv Singla — Decompression & File Handling (17%)
+* Chirag — Metrics & Visualization (17%)
+* Mahi Kataria — Testing & Sample Files(16%)
+* Shweta — Documentation & README(16%)
 
 ---
 
